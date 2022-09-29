@@ -1,0 +1,75 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/logueado/Acerca']">IncSilence</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" [routerLink]="['/logueado/Clientes']">Clientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/logueado/Citas']">Citas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/logueado/Suelos']">Suelos</a>
+        </li><li class="nav-item">
+          <a class="nav-link" [routerLink]="['/logueado/Pinturas']">Pintura</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/logueado/Rodapies']">Rodapiés</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link disabled">Facturas</a>
+        </li>
+        
+      </ul>
+     
+      
+    </div>
+    <a class="nav-link" style="float: right;" [routerLink]="['/logueado/Trabajadores']">Trabajadores</a>
+    <a class="nav-link" style="float: right;" [routerLink]="['/login']">Salir</a>
+  </div>
+</nav>
+  <button type="button" class="btn btn-primary" style="margin-left: 25%; margin: 1%; width: 5%; margin-left: 70%;"[routerLink]="['/logueado/Citas/Añadir']" >Añadir</button>
+  <div style="margin-left: 25%; margin-right: 25%; padding-top: 1%; ">
+    <div class="card" *ngFor="let cita of citas" style="padding: 1%;">
+      <div class="card-body">
+        
+          
+            <div style="width: 30%; float: left;" >
+                <img src="https://cdn-icons-png.flaticon.com/512/15/15727.png" style=" width: 70%;  " >
+              
+            </div>
+                <div style="text-align: left; width: 70%;  float: left;">
+                  ID: {{cita.id_cita}}
+                  <br>
+                  Tabajador: {{cita.trabajador_id}}
+                  <br>
+                  Cliente: {{cita.cliente_id.nombre}} {{cita.cliente_id.apellidos}}
+                  <br>
+                  Dirección: {{cita.direccion}}
+                  <br>
+                  Posibles compras:
+                  <ul>
+                  <li>Suelo: {{cita.interes_suelo}}</li>
+                  
+                  <li>Pintura: {{cita.interes_pintura}}</li>
+                  
+                 <li> Rodapiés: {{cita.interes_rodapies}} </li>
+                </ul>
+                  <p>Fecha de la visita: {{cita.fecha}}</p>
+                  <p>Descripcion de la visita: {{cita.motivo}}</p> 
+
+            </div>
+                
+               
+        
+      </div>
+      
+    </div>
+
+  </div>
+  

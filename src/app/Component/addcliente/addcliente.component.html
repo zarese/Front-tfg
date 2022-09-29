@@ -1,0 +1,47 @@
+
+  <h2 style="text-align:center ; padding: 1%;" >¡Nuevo cliente!</h2>
+
+<div class="card" style="width: 50%; margin-left: 25%; margin-right: auto;">
+  <div class="mb-3" style="padding: 1%;">
+
+    <div class="form-outline mb-4">
+        <label class="form-label" for="clienteNombre">Nombre</label>
+        <input type="text" id="clienteNombre"  [(ngModel)]="cliente.nombre" class="form-control form-control-lg" />
+       
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="clienteApellido">Apellidos</label>
+        <input type="text" id="clienteApellido" [(ngModel)]="cliente.apellidos" class="form-control form-control-lg" />
+       
+      </div>
+   
+    <div class="form-outline mb-4">
+      <label class="form-label" for="clienteDNI">DNI O CIF</label>
+      <input type="text" id="clienteDNI" [(ngModel)]="cliente.dni_cif" class="form-control form-control-lg" />
+     
+    </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="clienteEmail">Email</label>
+        <input type="text" id="clienteEmail" [(ngModel)]="cliente.email" class="form-control form-control-lg" />
+       
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="clienteDireccion">Dirección</label>
+        <input type="text" id="clienteDireccion" [(ngModel)]="cliente.direccion" class="form-control form-control-lg" />
+       
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="clienteDireccion2">Segunda dirección</label>
+        <input type="text" id="clienteDireccion2" [(ngModel)]="cliente.segundireccion" class="form-control form-control-lg" />
+       
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="clienteTelefono">Teléfono</label>
+        <input type="text" id="clienteTelefono" [(ngModel)]="cliente.telefono"class="form-control form-control-lg" />
+       
+      </div>
+ </div>
+      <button type="button" class="btn btn-success" id="botonClienteadd"  (click)="addCliente()" style="width: 30%; margin-left: 35%; margin-bottom: 1.5%;" [routerLink]="['/logueado/Clientes']">Registrar</button>
+
+  </div>
+  

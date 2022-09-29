@@ -1,0 +1,46 @@
+
+  <h2 style="text-align:center ; padding: 1%;" >Editar datos del trabajador</h2>
+
+  <div class="card" style="width: 50%; margin-left: 25%; margin-right: auto;">
+    <div class="mb-3" style="padding: 1%;">
+  
+      <div class="form-outline mb-4">
+        <input type="hidden" value="{{trabajadores[0]}}" class="form-control" name="id" [(ngModel)]="trabajador.id">
+          <label class="form-label" for="nombte-2">Nombre:</label>
+          <input type="text" id="nombre-2"  value="{{trabajadores[1]}}"minlength="3" [(ngModel)]="trabajador.nombre" class="form-control form-control-lg" />
+         
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="apellidos-2">Apellidos:</label>
+          <input type="text" id="apellidos-2" value="{{trabajadores[2]}}" minlength="2" [(ngModel)]="trabajador.apellidos"class="form-control form-control-lg"  />
+         
+        </div>
+     
+      <div class="form-outline mb-4"> 
+        <label class="form-label" for="dni-2">DNI:</label>
+        <input type="text" id="dni-2" minlength="9" value="{{trabajadores[3]}}" [(ngModel)]="trabajador.dni" class="form-control form-control-lg"  />
+       
+      </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="email-2">Email:</label>
+          <input type="text" id="email-2" minlength="9" value="{{trabajadores[4]}}" [(ngModel)]="trabajador.email" class="form-control form-control-lg"  />
+         
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="puesto-2">Puesto:</label>
+          <input type="text" id="puesto-2"   value="{{trabajadores[5]}}" [(ngModel)]="trabajador.puesto" class="form-control form-control-lg"  />
+         
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="estado-2">Estado:</label>
+          <input type="text" id="estado-2"   value="{{trabajadores[6]}}" [(ngModel)]="trabajador.estado" class="form-control form-control-lg" />
+         
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="telefono-2">Teléfono</label>
+          <input type="text" id="telefono-2"  minlength="4" value="{{trabajadores[7]}}" [(ngModel)]="trabajador.telefono"  class="form-control form-control-lg" />
+         
+        </div>
+   </div>
+        <button type="button" class="btn btn-success" style="width: 30%; margin-left: 35%; margin-bottom: 1.5%;" (click)=" modTrabajador()" [routerLink]="['/logueado/Trabajadores']">Actualizar</button>
+    </div>

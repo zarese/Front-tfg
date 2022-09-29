@@ -1,0 +1,52 @@
+
+<h2 style="text-align:center ; padding: 1%;" >Editar datos del suelo </h2>
+
+<div class="card" style="width: 50%; margin-left: 25%; margin-right: auto;">
+  <div class="mb-3" style="padding: 1%;">
+
+    <div class="form-outline mb-4">
+      <input type="hidden" value="{{suelos[0]}}" class="form-control" name="id" [(ngModel)]="suelo.id">
+        <label class="form-label" for="tiposuelo">Color:</label>
+        <input type="text" id="tiposuelo" value="{{suelos[1]}}" [(ngModel)]="suelo.color" minlength="5" class="form-control form-control-lg" />
+       
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="instalacion">Acabado:</label>
+        <input type="text" id="instalacion" value="{{suelos[2]}}" minlength="4"  [(ngModel)]="suelo.acabado"  class="form-control form-control-lg"  />
+       
+      </div>
+   
+    <div class="form-outline mb-4"> 
+      <label class="form-label" for="compatibilidad_rad">Tipo:</label>
+      <input type="text" id="compatibilidad_rad" minlength="2" value="{{suelos[3]}}"  [(ngModel)]="suelo.tipo" class="form-control form-control-lg"  />
+     
+    </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="material-2">Compatible:</label>
+        <input type="text" id="material-2" minlength="4" value="{{suelos[4]}}" [(ngModel)]="suelo.compatibilidad_rad" class="form-control form-control-lg"  />
+       
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="color-2">Material:</label>
+        <input type="text" id="color-2" minlength="4" value="{{suelos[5]}}"  [(ngModel)]="suelo.material"class="form-control form-control-lg" />
+       
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="acabado-2">Instalación:</label>
+        <input type="text" id="acabado-2" minlength="4"value="{{suelos[6]}}" [(ngModel)]="suelo.instalacion" class="form-control form-control-lg" />
+       
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="precio-2">IMG:</label>
+        <input type="text" id="precio-2"   value="{{suelos[7]}}" [(ngModel)]="suelo.img" class="form-control form-control-lg" />
+       
+      </div>
+      <div class="form-outline mb-4">
+        <label class="form-label" for="img-2">Precio:</label>
+        <input type="text" id="img-2"  minlength="4" value="{{suelos[8]}}" [(ngModel)]="suelo.precio" class="form-control form-control-lg" />
+       
+      </div>
+ </div>
+      <button type="button" class="btn btn-success" style="width: 30%; margin-left: 35%; margin-bottom: 1.5%;" (click)="modSuelos()" [routerLink]="['/logueado/Suelos']">Actualizar</button>
+
+  </div>

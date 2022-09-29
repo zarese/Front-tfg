@@ -1,0 +1,46 @@
+
+  <h2 style="text-align:center ; padding: 1%;" >Editar datos del cliente</h2>
+
+  <div class="card" style="width: 50%; margin-left: 25%; margin-right: auto;">
+    <div class="mb-3" style="padding: 1%;">
+  
+      <div class="form-outline mb-4">
+        <input type="hidden" value="{{clientes[0]}}" class="form-control" name="id" [(ngModel)]="cliente.id">
+          <label class="form-label" for="nombre">Nombre:</label>
+          <input type="text" id="nombre" value="{{clientes[1]}}" minlength="3" [(ngModel)]="cliente.nombre" class="form-control form-control-lg"/>
+         
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="apellidos">Apellidos:</label>
+          <input type="text" id="apellidos" minlength="2" value="{{clientes[2]}}" [(ngModel)]="cliente.apellidos" class="form-control form-control-lg"  />
+         
+        </div>
+     
+      <div class="form-outline mb-4"> 
+        <label class="form-label" for="dnicif">DNI o CIF:</label>
+        <input type="text" id="dnicif" minlength="9" value="{{clientes[3]}}" [(ngModel)]="cliente.dni_cif" class="form-control form-control-lg" />
+       
+      </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="email">Email:</label>
+          <input type="text" id="email" minlength="9" value="{{clientes[4]}}" [(ngModel)]="cliente.email" class="form-control form-control-lg" />
+         
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="direccion">Dirección:</label>
+          <input type="text" id="direccion"    class="form-control form-control-lg" value="{{clientes[5]}}" [(ngModel)]="cliente.direccion"  />
+         
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="direccion2">Segunda dirección:</label>
+          <input type="text" id="direccion2"  class="form-control form-control-lg" value="{{clientes[6]}}"  [(ngModel)]="cliente.segundireccion"/>
+         
+        </div>
+        <div class="form-outline mb-4">
+          <label class="form-label" for="telefono">Teléfono</label>
+          <input type="text" id="telefono"  minlength="4"   class="form-control form-control-lg" value="{{clientes[7]}}"  [(ngModel)]="cliente.telefono"/>
+         
+        </div>
+   </div>
+        <button type="button" class="btn btn-success" (click)="modClientes()" style="width: 30%; margin-left: 35%; margin-bottom: 1.5%;" [routerLink]="['/logueado/Clientes']">Actualizar</button>
+    </div>

@@ -1,0 +1,50 @@
+
+  <h2 style="text-align:center ; padding: 1%;" >¡Nuevo trabajador!</h2>
+
+  <div class="card" style="width: 50%; margin-left: 25%; margin-right: auto;">
+    <div class="mb-3" style="padding: 1%;">
+  
+        <div class="form-outline mb-4">
+            <label class="form-label" for="nombre-2">Nombre:</label>
+            <input type="text" id="nombre-2" class="form-control form-control-lg" [(ngModel)]="trabajador.nombre" />
+         
+        </div>
+        <div class="form-outline mb-4">
+            <label class="form-label" for="apellidos-2">Apellidos:</label>
+            <input type="text" id="apellidos-2" class="form-control form-control-lg" [(ngModel)]="trabajador.apellidos"/>
+         
+        </div>
+     
+        <div class="form-outline mb-4">
+            <label class="form-label" for="dni-2">DNI:</label>
+            <input type="text" id="dni-2" class="form-control form-control-lg"  [(ngModel)]="trabajador.dni" />
+       
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label" for="email-2">Email:</label>
+            <input type="text" id="email-2" class="form-control form-control-lg" [(ngModel)]="trabajador.email" />
+       
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label" for="puesto-2">Puesto:</label>
+            <input type="text" id="puesto-2" class="form-control form-control-lg" [(ngModel)]="trabajador.puesto" />
+       
+        </div>
+
+        <div class="form-outline mb-4">
+            <label class="form-label" for="estado-2">Estado:</label>
+            <input type="text" id="estado-2" class="form-control form-control-lg" [(ngModel)]="trabajador.estado"/>
+         
+        </div>
+        <div class="form-outline mb-4">
+            <label class="form-label" for="telefono-2">Teléfono:</label>
+            <input type="text" id="telefono-2" class="form-control form-control-lg" [(ngModel)]="trabajador.telefono"/>
+         
+        </div>
+    </div>
+            <button type="button" class="btn btn-success" style="width: 30%; margin-left: 35%; margin-bottom: 1.5%;" (click)="addCliente()" [routerLink]="['/logueado/Trabajadores']">Registrar</button>
+    
+        </div>
+    
